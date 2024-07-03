@@ -16,6 +16,17 @@
             </roles>
             <timezone>Europe/Vienna</timezone>
         </developer>
+        <developer>
+            <id>AlexWinkler</id>
+            <name>Alexander Winkler</name>
+            <email>alexander.winkler3@edu.fh-joanneum.at</email>
+            <organization>FH JOANNEUM GmbH</organization>
+            <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+            <roles>
+                <role>University student</role>
+            </roles>
+            <timezone>Europe/Vienna</timezone>
+        </developer>
     </developers>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
