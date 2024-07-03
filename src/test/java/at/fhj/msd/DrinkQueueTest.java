@@ -19,19 +19,39 @@ public class DrinkQueueTest {
 
     //queue.offer() should return true
     @Test
-    public void testOffer() {}
+    public void testOffer() {
+        final boolean expected = true;
+        boolean actual = queue.offer(new SimpleDrink("Bier", new Liquid("Bier", 0.4, 0.14)));
+        assertEquals(expected, actual);
+    }
 
     //queue.offer() should return true
     @Test
-    public void testOffer2() {}
+    public void testOffer2() {
+        final boolean expected = false;
+        queue.offer(new SimpleDrink("Bier", new Liquid("Bier", 0.4, 0.14)));
+        queue.offer(new SimpleDrink("Vino", new Liquid("Vino", 1.2, 0.2)));
+        boolean actual = queue.offer(new SimpleDrink("Vodka", new Liquid("Vodka", 0.7, 0.35)));
+        assertEquals(expected, actual);
+    }
 
     //queue.poll() should return initialized Drink
     @Test
-    public void testPoll() {}
+    public void testPoll() {
+        Drink drink = new SimpleDrink("Vino", new Liquid("Vino", 1.2, 0.2));
+        queue.offer(drink);
+        Drink actual = queue.poll();
+        assertEquals(drink, actual);
+    }
 
     //queue.remove() should return initialized Drink
     @Test
-    public void testRemove() {}
+    public void testRemove() {
+        Drink drink = new SimpleDrink("Vino", new Liquid("Vino", 1.2, 0.2));
+        queue.offer(drink);
+        Drink actual = queue.remove();
+        assertEquals(drink, actual);
+    }
 
     //queue.remove() should throw NoSuchElementException
     @Test
