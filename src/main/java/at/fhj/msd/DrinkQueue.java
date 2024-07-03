@@ -26,7 +26,10 @@ public class DrinkQueue {
      * @return true if the element was added, false otherwise
      */
     public boolean offer(Drink drink){
-        return false;
+        if (drinkQueue.size() >= maxSize)
+            return false;
+        drinkQueue.add(drink);
+        return true;
     }
 
     /**
@@ -35,7 +38,7 @@ public class DrinkQueue {
      * @return the first element in the queue, or null if the queue is empty
      */
     public Drink poll(){
-        return null;
+        return drinkQueue.poll();
     }
 
     /**
@@ -46,7 +49,10 @@ public class DrinkQueue {
      * @throws NoSuchElementException if the queue is empty
      */
     public Drink remove(){
-        return null;
+        Drink drink = drinkQueue.poll();
+        if (drink == null)
+            throw new NoSuchElementException();
+        return drink;
     }
 
     /**
