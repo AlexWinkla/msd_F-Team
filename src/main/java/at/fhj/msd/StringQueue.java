@@ -70,6 +70,11 @@ public class StringQueue implements IQueue {
     return element;
   }
 
+  /**
+   *  checks if there are elements left
+   * @return String of the first element if null throw exception
+   */
+
   @Override
   public String element() {
     String element = peek();
