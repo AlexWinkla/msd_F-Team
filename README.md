@@ -6,11 +6,11 @@
 
 ## Jonas Sieff
 
-- [ ] java_doc
+- [x] java_doc
 - [ ] main
 - [ ] maven_detail
-- [ ] bug_hunt
-- [ ] drink
+- [x] bug_hunt
+- [x] drink
 
 ## Alexander Winkler
 
