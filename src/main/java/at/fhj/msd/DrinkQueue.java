@@ -1,56 +1,71 @@
 package at.fhj.msd;
 
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 import java.util.Queue;
 
-public class DrinkQueue implements IQueue{
+public class DrinkQueue {
 
-    private final String name;
+    private final int maxSize;
     private final Queue<Drink> drinkQueue;
 
-    public DrinkQueue(String name){
-        this.name = name;
+    public DrinkQueue(int maxSize){
+        this.maxSize = maxSize;
         drinkQueue = new LinkedList<>();
     }
-    public DrinkQueue(String name, Queue<Drink> drinkQueue){
-        this.name = name;
+
+    public DrinkQueue(int maxSize, Queue<Drink> drinkQueue){
+        this.maxSize = maxSize;
         this.drinkQueue = drinkQueue;
     }
 
-    public void addDrink(Drink drink){
-        drinkQueue.add(drink);
-    }
-
-    public Drink dequeue(){
-        return drinkQueue.poll();
-    }
-
-    public boolean isEmpty(){
-        return drinkQueue.isEmpty();
-    }
-
-    @Override
-    public boolean offer(String obj) {
+    /**
+     * Adds a Drink to the queue if the size is not greater than maxSize.
+     *
+     * @param drink the Drink to be added to the queue
+     * @return true if the element was added, false otherwise
+     */
+    public boolean offer(Drink drink){
         return false;
     }
 
-    @Override
-    public String poll() {
-        return "";
+    /**
+     * Removes and returns the first element in the queue.
+     *
+     * @return the first element in the queue, or null if the queue is empty
+     */
+    public Drink poll(){
+        return null;
     }
 
-    @Override
-    public String remove() {
-        return "";
+    /**
+     * Removes and returns the first element in the queue.
+     * If the queue is empty, throws an exception.
+     *
+     * @return the first element in the queue
+     * @throws NoSuchElementException if the queue is empty
+     */
+    public Drink remove(){
+        return null;
     }
 
-    @Override
-    public String peek() {
-        return "";
+    /**
+     * Retrieves, but does not remove, the first element of the queue.
+     *
+     * @return the first element of the queue, or null if the queue is empty
+     */
+    public Drink peek(){
+        return null;
     }
 
-    @Override
-    public String element() {
-        return "";
+    /**
+     * Retrieves, but does not remove, the first element of the queue.
+     * If the queue is empty, throws an exception.
+     *
+     * @return the first element of the queue
+     * @throws NoSuchElementException if the queue is empty
+     */
+    public Drink element(){
+        return null;
     }
 }
