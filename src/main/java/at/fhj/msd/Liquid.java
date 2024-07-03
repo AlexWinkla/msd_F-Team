@@ -1,5 +1,5 @@
 package at.fhj.msd;
-// put into drinkss
+// put into drinks
 public class Liquid {
 
     private String name;
@@ -7,7 +7,7 @@ public class Liquid {
      
     private double volume;
 
-    // alcohohl percent (eg 42 ) 
+    // alcohol percent (eg 42 )
 
     private double alcoholPercent;
 

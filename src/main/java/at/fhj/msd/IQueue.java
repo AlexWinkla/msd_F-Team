@@ -1,24 +1,46 @@
 package at.fhj.msd;
 
+import java.util.NoSuchElementException;
+
 public interface IQueue {
 
-
+  /**
+   * Adds an object to the queue if the size is not greater than maxSize.
+   *
+   * @param obj the String to be added to the queue
+   * @return true if the element was added, false otherwise
+   */
   public abstract boolean offer(String obj);
 
-  //returns + del 1st element; null if nothing in there
-   //
+  /**
+   * Removes and returns the first element in the queue.
+   *
+   * @return the first element in the queue, or null if the queue is empty
+   */
   public abstract String poll();
 
-  /* 
-  same as poll, if there is nothing in there error NoSuchElementException
+  /**
+   * Removes and returns the first element in the queue.
+   * If the queue is empty, throws an exception.
+   *
+   * @return the first element in the queue
+   * @throws NoSuchElementException if the queue is empty
    */
   public abstract String remove();
 
-  // 1st element without dlete, otherwise null
-   
+  /**
+   * Retrieves, but does not remove, the first element of the queue.
+   *
+   * @return the first element of the queue, or null if the queue is empty
+   */
   public abstract String peek();
 
-  // element is to peek what remove is to poll
-  
+  /**
+   * Retrieves, but does not remove, the first element of the queue.
+   * If the queue is empty, throws an exception.
+   *
+   * @return the first element of the queue
+   * @throws NoSuchElementException if the queue is empty
+   */
   public abstract String element();
 }
