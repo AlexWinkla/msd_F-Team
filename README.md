@@ -4,7 +4,7 @@
 
 ## Team Members
 
-> <div style="text-align: center;">Jonas Sieff</div>
+## Jonas Sieff
 
 - [ ] java_doc
 - [ ] main
@@ -12,7 +12,7 @@
 - [ ] bug_hunt
 - [ ] drink
 
-> <div style="text-align: center;">Alexander Winkler</div>
+## Alexander Winkler
 
 - [ ] tests
 - [x] readme
