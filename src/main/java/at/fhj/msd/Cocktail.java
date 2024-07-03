@@ -3,6 +3,11 @@ package at.fhj.msd;
 import java.util.List;
 
 public class Cocktail extends Drink{
+
+
+
+    protected List<Liquid> liquids;
+
     /**
      * Creates a Cocktail object with given name
      *
@@ -23,8 +28,8 @@ public class Cocktail extends Drink{
 
 
     public Cocktail(String name, List<Liquid> liquids) {
-        super(name, liquids);
-
+        super(name);
+        this.liquids = liquids;
     }
 
 
