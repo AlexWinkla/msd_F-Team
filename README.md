@@ -14,11 +14,11 @@
 
 ## Alexander Winkler
 
-- [ ] tests
+- [x] tests
 - [x] readme
 - [x] maven
-- [ ] maven_site
-- [ ] Queue
+- [x] maven_site
+- [x] Queue
 
 ---
 
