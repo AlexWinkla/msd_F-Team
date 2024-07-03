@@ -9,12 +9,12 @@ public class DrinkQueue {
     private final int maxSize;
     private final Queue<Drink> drinkQueue;
 
-    public DrinkQueue(int maxSize){
+    public DrinkQueue(int maxSize) {
         this.maxSize = maxSize;
         drinkQueue = new LinkedList<>();
     }
 
-    public DrinkQueue(int maxSize, Queue<Drink> drinkQueue){
+    public DrinkQueue(int maxSize, Queue<Drink> drinkQueue) {
         this.maxSize = maxSize;
         this.drinkQueue = drinkQueue;
     }
@@ -25,7 +25,7 @@ public class DrinkQueue {
      * @param drink the Drink to be added to the queue
      * @return true if the element was added, false otherwise
      */
-    public boolean offer(Drink drink){
+    public boolean offer(Drink drink) {
         if (drinkQueue.size() >= maxSize)
             return false;
         drinkQueue.add(drink);
@@ -37,7 +37,7 @@ public class DrinkQueue {
      *
      * @return the first element in the queue, or null if the queue is empty
      */
-    public Drink poll(){
+    public Drink poll() {
         return drinkQueue.poll();
     }
 
@@ -48,7 +48,7 @@ public class DrinkQueue {
      * @return the first element in the queue
      * @throws NoSuchElementException if the queue is empty
      */
-    public Drink remove(){
+    public Drink remove() {
         Drink drink = drinkQueue.poll();
         if (drink == null)
             throw new NoSuchElementException();
@@ -60,8 +60,8 @@ public class DrinkQueue {
      *
      * @return the first element of the queue, or null if the queue is empty
      */
-    public Drink peek(){
-        return null;
+    public Drink peek() {
+        return drinkQueue.peek();
     }
 
     /**
@@ -71,7 +71,10 @@ public class DrinkQueue {
      * @return the first element of the queue
      * @throws NoSuchElementException if the queue is empty
      */
-    public Drink element(){
-        return null;
+    public Drink element() {
+        Drink drink = drinkQueue.peek();
+        if (drink == null)
+            throw new NoSuchElementException();
+        return drink;
     }
 }
