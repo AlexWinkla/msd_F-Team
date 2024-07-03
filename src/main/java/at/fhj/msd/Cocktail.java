@@ -4,15 +4,28 @@ import java.util.List;
 
 public class Cocktail extends Drink{
     /**
-     * Creates a Drink object with given name
+     * Creates a Cocktail object with given name
      *
      * @param name name of the drink
      */
+
+
     public Cocktail(String name) {
         super(name);
     }
 
+    /**
+     * Creates a Cocktail object with given name and list of liquids
+     *
+     * @param name name of the drink
+     */
 
+
+
+    public Cocktail(String name, List<Liquid> liquids) {
+        super(name, liquids);
+
+    }
 
 
 
