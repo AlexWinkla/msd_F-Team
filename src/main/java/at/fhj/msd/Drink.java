@@ -11,7 +11,7 @@ public abstract class Drink {
      */
     protected String name;
 
-    protected List<Liquid> liquids;
+
 
 
     /**
@@ -22,12 +22,6 @@ public abstract class Drink {
      */
     public Drink(String name) {
         this.name = name;
-        this.liquids = null;
-    }
-
-    public Drink(String name, List<Liquid> liquids) {
-        this.name = name;
-        this.liquids = liquids;
     }
 
 
