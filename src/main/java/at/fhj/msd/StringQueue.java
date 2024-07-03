@@ -4,14 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-// there's some Bugs included, try to debug the code and fix the Bugs
-// there are different Bugs, wrong implementation, typos, ...
-// write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
 
 public class StringQueue implements IQueue {
 
   private List<String> elements = new ArrayList<String>();
-  private int maxSize = 5;
+  private int maxSize = 5;      // maximum size of arraylist
 
   public StringQueue(int maxsize) {
     maxSize = maxSize;
@@ -50,6 +47,12 @@ public class StringQueue implements IQueue {
     return element;
   }
 
+  /**
+   *  Sets element to ""
+   * @return String of the element
+   */
+
+
 
   @Override
   public String remove() {
@@ -58,6 +61,12 @@ public class StringQueue implements IQueue {
 
       return element;
   }
+
+  /**
+   *  Looks at the first element
+   * @return String of the first element or null if nothing left
+   */
+
 
   @Override
   public String peek() {
