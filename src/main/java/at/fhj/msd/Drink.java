@@ -1,5 +1,7 @@
 package at.fhj.msd;
 
+import java.util.List;
+
 /**
  * Abstract base class for concrete drink classes
  */
@@ -8,6 +10,10 @@ public abstract class Drink {
      * name of the drink
      */
     protected String name;
+
+    protected List<Liquid> liquids;
+
+
     /**
      * Creates a Drink object with given name
      *
@@ -16,7 +22,15 @@ public abstract class Drink {
      */
     public Drink(String name) {
         this.name = name;
+        this.liquids = null;
     }
+
+    public Drink(String name, List<Liquid> liquids) {
+        this.name = name;
+        this.liquids = liquids;
+    }
+
+
     /**
      * Calculates and returns volume of drink
      *
