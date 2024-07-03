@@ -63,6 +63,7 @@ public class DrinkQueueTest {
     @Test
     public void testPeek(){
         Drink drink = new SimpleDrink("Vino", new Liquid("Vino", 1.2, 0.2));
+        queue.offer(drink);
         Drink actual = queue.peek();
         assertEquals(drink, actual);
     }
@@ -71,6 +72,7 @@ public class DrinkQueueTest {
     @Test
     public void testElement(){
         Drink drink = new SimpleDrink("Vino", new Liquid("Vino", 1.2, 0.2));
+        queue.offer(drink);
         Drink actual = queue.element();
         assertEquals(drink, actual);
     }
