@@ -7,8 +7,8 @@
 ## Jonas Sieff
 
 - [x] java_doc
-- [ ] main
-- [ ] maven_detail
+- [x] main
+- [x] maven_detail
 - [x] bug_hunt
 - [x] drink
 
