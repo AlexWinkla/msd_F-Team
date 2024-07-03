@@ -30,7 +30,7 @@
 ## Usage
 The project includes classes for managing different types of drinks in a queue system. Key components include:
 
-- `Drink` interface
+- `Drink` Abstract class
 - `Liquid` class
 - `Cocktail` class
 - `DrinkQueue` class for managing drinks in a queue
@@ -50,6 +50,7 @@ To use the system, create `Drink` objects and manage them using the `DrinkQueue`
 
 ## Testing
 Run tests using the following command:
+- `mvn test`
 
 ## Documentation
 Generate and view the Maven site documentation:
