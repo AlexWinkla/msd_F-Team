@@ -55,18 +55,30 @@ public class DrinkQueueTest {
 
     //queue.remove() should throw NoSuchElementException
     @Test
-    public void testRemoveException(){}
+    public void testRemoveException(){
+        assertThrows(NoSuchElementException.class, queue::remove);
+    }
 
     //queue.element() should return initialized Drink
     @Test
-    public void testPeek(){}
+    public void testPeek(){
+        Drink drink = new SimpleDrink("Vino", new Liquid("Vino", 1.2, 0.2));
+        Drink actual = queue.peek();
+        assertEquals(drink, actual);
+    }
 
     //queue.element() should return initialized Drink
     @Test
-    public void testElement(){}
+    public void testElement(){
+        Drink drink = new SimpleDrink("Vino", new Liquid("Vino", 1.2, 0.2));
+        Drink actual = queue.element();
+        assertEquals(drink, actual);
+    }
 
     //queue.element() should throw NoSuchElementException
     @Test
-    public void testElementException(){}
+    public void testElementException(){
+        assertThrows(NoSuchElementException.class, queue::element);
+    }
 
 }
