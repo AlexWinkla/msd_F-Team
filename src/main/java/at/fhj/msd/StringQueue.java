@@ -17,15 +17,27 @@ public class StringQueue implements IQueue {
     maxSize = maxSize;
   }
 
+
+  /**
+   *
+   * @param obj adds an obj to the queue if the size is not greater than maxSize
+   * @return returns true if element was added else false
+   */
+
   @Override
   public boolean offer(String obj) {
-    if (elements.size() != maxSize)
+    if (elements.size() < maxSize)
       elements.add(obj);
     else
       return false;
 
     return true;
   }
+
+  /**
+   * Removes the first element
+   * @return String from the first removed element
+   */
 
   @Override
   public String poll() {
@@ -37,6 +49,7 @@ public class StringQueue implements IQueue {
 
     return element;
   }
+
 
   @Override
   public String remove() {

@@ -1,19 +1,8 @@
 package at.fhj.msd;
 
-// fastly written (not really nice) comments you should adapt
 public interface IQueue {
-  /** 
-   * I am a really bad comment
-   * 
-   * fasdfadsffdsadsf
-   * 
-   * fdsasdfadsf
-   * 
-   *  add object to queue, true if okay 
-   * 
-   * i fell asleep on my keyboard...
-   * 
-   * */ 
+
+
   public abstract boolean offer(String obj);
 
   //returns + del 1st element; null if nothing in there
